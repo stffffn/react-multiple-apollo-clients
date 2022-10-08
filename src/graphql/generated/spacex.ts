@@ -987,14 +987,14 @@ export type Volume = {
   cubic_meters?: Maybe<Scalars['Int']>;
 };
 
-export type GetAllSpaceXDragonsQueryVariables = Exact<{ [key: string]: never; }>;
+export type GetAllSpacexDragonsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetAllSpaceXDragonsQuery = { __typename?: 'Query', dragons?: Array<{ __typename?: 'Dragon', name?: string | null, active?: boolean | null, description?: string | null } | null> | null };
+export type GetAllSpacexDragonsQuery = { __typename?: 'Query', dragons?: Array<{ __typename?: 'Dragon', name?: string | null, active?: boolean | null, description?: string | null } | null> | null };
 
 
-export const GetAllSpaceXDragonsDocument = gql`
-    query GetAllSpaceXDragons {
+export const GetAllSpacexDragonsDocument = gql`
+    query GetAllSpacexDragons {
   dragons {
     name
     active
@@ -1004,28 +1004,28 @@ export const GetAllSpaceXDragonsDocument = gql`
     `;
 
 /**
- * __useGetAllSpaceXDragonsQuery__
+ * __useGetAllSpacexDragonsQuery__
  *
- * To run a query within a React component, call `useGetAllSpaceXDragonsQuery` and pass it any options that fit your needs.
- * When your component renders, `useGetAllSpaceXDragonsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * To run a query within a React component, call `useGetAllSpacexDragonsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetAllSpacexDragonsQuery` returns an object from Apollo Client that contains loading, error, and data properties
  * you can use to render your UI.
  *
  * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
  *
  * @example
- * const { data, loading, error } = useGetAllSpaceXDragonsQuery({
+ * const { data, loading, error } = useGetAllSpacexDragonsQuery({
  *   variables: {
  *   },
  * });
  */
-export function useGetAllSpaceXDragonsQuery(baseOptions?: Apollo.QueryHookOptions<GetAllSpaceXDragonsQuery, GetAllSpaceXDragonsQueryVariables>) {
+export function useGetAllSpacexDragonsQuery(baseOptions?: Apollo.QueryHookOptions<GetAllSpacexDragonsQuery, GetAllSpacexDragonsQueryVariables>) {
         const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useQuery<GetAllSpaceXDragonsQuery, GetAllSpaceXDragonsQueryVariables>(GetAllSpaceXDragonsDocument, options);
+        return Apollo.useQuery<GetAllSpacexDragonsQuery, GetAllSpacexDragonsQueryVariables>(GetAllSpacexDragonsDocument, options);
       }
-export function useGetAllSpaceXDragonsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetAllSpaceXDragonsQuery, GetAllSpaceXDragonsQueryVariables>) {
+export function useGetAllSpacexDragonsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetAllSpacexDragonsQuery, GetAllSpacexDragonsQueryVariables>) {
           const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useLazyQuery<GetAllSpaceXDragonsQuery, GetAllSpaceXDragonsQueryVariables>(GetAllSpaceXDragonsDocument, options);
+          return Apollo.useLazyQuery<GetAllSpacexDragonsQuery, GetAllSpacexDragonsQueryVariables>(GetAllSpacexDragonsDocument, options);
         }
-export type GetAllSpaceXDragonsQueryHookResult = ReturnType<typeof useGetAllSpaceXDragonsQuery>;
-export type GetAllSpaceXDragonsLazyQueryHookResult = ReturnType<typeof useGetAllSpaceXDragonsLazyQuery>;
-export type GetAllSpaceXDragonsQueryResult = Apollo.QueryResult<GetAllSpaceXDragonsQuery, GetAllSpaceXDragonsQueryVariables>;
+export type GetAllSpacexDragonsQueryHookResult = ReturnType<typeof useGetAllSpacexDragonsQuery>;
+export type GetAllSpacexDragonsLazyQueryHookResult = ReturnType<typeof useGetAllSpacexDragonsLazyQuery>;
+export type GetAllSpacexDragonsQueryResult = Apollo.QueryResult<GetAllSpacexDragonsQuery, GetAllSpacexDragonsQueryVariables>;

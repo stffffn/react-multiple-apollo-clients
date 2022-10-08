@@ -1,4 +1,4 @@
-query GetAllSpaceXDragons {
+query GetAllSpacexDragons {
   dragons {
     name
     active

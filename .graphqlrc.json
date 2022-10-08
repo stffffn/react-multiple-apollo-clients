@@ -1,4 +1,4 @@
 {
-  "schema": "src/graphql/generated/graphql.schema.json",
+  "schema": "src/graphql/generated/spacex.schema.json",
   "documents": "**/*.graphql"
 }

@@ -19,12 +19,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "npm run serve & npm run codegen -- --watch",
+    "start": "npm run serve & npm run codegen:spacex -- --watch",
     "serve": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "codegen": "graphql-codegen --config src/graphql/codegen.ts"
+    "codegen:spacex": "graphql-codegen --config src/graphql/codegen/spacexConfig.ts"
   },
   "eslintConfig": {
     "extends": [

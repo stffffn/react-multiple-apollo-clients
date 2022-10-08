@@ -1,6 +1,6 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client';
 
-export const defaultClient = new ApolloClient({
+export const spacexApolloClient = new ApolloClient({
   uri: 'https://api.spacex.land/graphql/',
   cache: new InMemoryCache(),
 });

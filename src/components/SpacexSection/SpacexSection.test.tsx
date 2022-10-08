@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
 import { MockedProvider } from '@apollo/client/testing';
-import { GetAllSpaceXDragonsDocument } from './graphql/generated/graphql';
+import { SpacexSection } from './SpacexSection';
+import { GetAllSpacexDragonsDocument } from '../../graphql/generated/spacex';
 import { act } from 'react-dom/test-utils';
 import { wait } from '@testing-library/user-event/dist/utils';
 
@@ -19,7 +19,7 @@ const secondEntry = {
 
 const dragonsMock = {
   request: {
-    query: GetAllSpaceXDragonsDocument,
+    query: GetAllSpacexDragonsDocument,
   },
   result: {
     data: {
@@ -32,15 +32,10 @@ describe('App', () => {
   beforeEach(async () => {
     render(
       <MockedProvider mocks={[dragonsMock]} addTypename={false}>
-        <App />
+        <SpacexSection />
       </MockedProvider>
     );
     await act(() => wait(0));
-  });
-
-  it('should render the learn react link', () => {
-    const linkElement = screen.getByText(/learn react/i);
-    expect(linkElement).toBeInTheDocument();
   });
 
   it('should render the first dragon entry', () => {
