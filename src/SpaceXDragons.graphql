@@ -1,0 +1,7 @@
+query GetAllSpaceXDragons {
+  dragons {
+    name
+    active
+    description
+  }
+}

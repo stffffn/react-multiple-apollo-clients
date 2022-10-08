@@ -1,8 +1,11 @@
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { useGetAllSpaceXDragonsQuery } from './graphql/generated/graphql';
 
 function App() {
+  const { data } = useGetAllSpaceXDragonsQuery();
+  console.log(data);
+
   return (
     <div className="App">
       <header className="App-header">
