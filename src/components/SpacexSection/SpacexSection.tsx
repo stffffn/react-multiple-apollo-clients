@@ -1,16 +1,17 @@
 import { useGetAllSpacexDragonsQuery } from '../../graphql/generated/spacex';
 
 export const SpacexSection: React.FC = () => {
-  const { data } = useGetAllSpacexDragonsQuery();
+  const { data, loading } = useGetAllSpacexDragonsQuery();
 
   return (
     <section>
-      <h1>SpaceX Client Data</h1>
+      <h2>SpaceX Apollo Client Data</h2>
+      {loading && <span>Loading...</span>}
       {data?.dragons?.map((dragon, index) => (
         <div key={index}>
-          <h2>
+          <h3>
             {dragon?.name} (Active: {dragon?.active?.toString()})
-          </h2>
+          </h3>
           <p>{dragon?.description}</p>
         </div>
       ))}

@@ -1,0 +1,9 @@
+query GetAllPlanets {
+  allPlanets {
+    planets {
+      name
+      gravity
+      population
+    }
+  }
+}

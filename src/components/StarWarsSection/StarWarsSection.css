@@ -1,0 +1,4 @@
+.starWarsSection {
+  max-height: 250px;
+  overflow-x: scroll;
+}

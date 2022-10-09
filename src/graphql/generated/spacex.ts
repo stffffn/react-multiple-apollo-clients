@@ -1,5 +1,6 @@
 import { gql } from '@apollo/client';
 import * as Apollo from '@apollo/client';
+import * as ApolloReactHooks from '../CustomApolloHooks';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
@@ -1018,13 +1019,13 @@ export const GetAllSpacexDragonsDocument = gql`
  *   },
  * });
  */
-export function useGetAllSpacexDragonsQuery(baseOptions?: Apollo.QueryHookOptions<GetAllSpacexDragonsQuery, GetAllSpacexDragonsQueryVariables>) {
+export function useGetAllSpacexDragonsQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<GetAllSpacexDragonsQuery, GetAllSpacexDragonsQueryVariables>) {
         const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useQuery<GetAllSpacexDragonsQuery, GetAllSpacexDragonsQueryVariables>(GetAllSpacexDragonsDocument, options);
+        return ApolloReactHooks.useQuery<GetAllSpacexDragonsQuery, GetAllSpacexDragonsQueryVariables>(GetAllSpacexDragonsDocument, options);
       }
-export function useGetAllSpacexDragonsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetAllSpacexDragonsQuery, GetAllSpacexDragonsQueryVariables>) {
+export function useGetAllSpacexDragonsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<GetAllSpacexDragonsQuery, GetAllSpacexDragonsQueryVariables>) {
           const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useLazyQuery<GetAllSpacexDragonsQuery, GetAllSpacexDragonsQueryVariables>(GetAllSpacexDragonsDocument, options);
+          return ApolloReactHooks.useLazyQuery<GetAllSpacexDragonsQuery, GetAllSpacexDragonsQueryVariables>(GetAllSpacexDragonsDocument, options);
         }
 export type GetAllSpacexDragonsQueryHookResult = ReturnType<typeof useGetAllSpacexDragonsQuery>;
 export type GetAllSpacexDragonsLazyQueryHookResult = ReturnType<typeof useGetAllSpacexDragonsLazyQuery>;

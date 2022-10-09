@@ -1,4 +1,13 @@
 {
-  "schema": "src/graphql/generated/spacex.schema.json",
-  "documents": "**/*.graphql"
+  "projects": {
+    "starwars": {
+      "schema": "src/graphql/generated/starwars.schema.json",
+      "documents": "src/**/*.sw.graphql"
+    },
+    "spacex": {
+      "schema": "src/graphql/generated/spacex.schema.json",
+      "documents": "src/**/*.graphql",
+      "exclude": "src/**/*.sw.graphql"
+    }
+  }
 }

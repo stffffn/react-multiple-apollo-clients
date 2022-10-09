@@ -28,7 +28,7 @@ const dragonsMock = {
   },
 };
 
-describe('App', () => {
+describe('SpaceXSection', () => {
   beforeEach(async () => {
     render(
       <MockedProvider mocks={[dragonsMock]} addTypename={false}>

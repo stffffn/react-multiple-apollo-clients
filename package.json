@@ -19,12 +19,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "npm run serve & npm run codegen:spacex -- --watch",
+    "start": "npm run serve & npm run update-graphql -- --watch",
     "serve": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "codegen:spacex": "graphql-codegen --config src/graphql/codegen/spacexConfig.ts"
+    "update-graphql": "npm run update-graphql:spacex & npm run update-graphql:starwars",
+    "update-graphql:spacex": "graphql-codegen --config src/graphql/codegen/spacexConfig.ts",
+    "update-graphql:starwars": "graphql-codegen --config src/graphql/codegen/starwarsConfig.ts"
   },
   "eslintConfig": {
     "extends": [
