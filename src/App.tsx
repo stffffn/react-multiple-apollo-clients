@@ -1,3 +1,4 @@
+import { CountriesSection } from './components/CountriesSection/CountriesSection';
 import { SpacexSection } from './components/SpacexSection/SpacexSection';
 import { StarWarsSection } from './components/StarWarsSection/StarWarsSection';
 
@@ -10,6 +11,7 @@ export const App: React.FC = () => {
       <hr />
       <StarWarsSection />
       <hr />
+      <CountriesSection />
     </div>
   );
 };

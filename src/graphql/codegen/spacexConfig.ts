@@ -1,8 +1,13 @@
 import { CodegenConfig } from '@graphql-codegen/cli';
+import { spacexURL } from '../ApolloClients';
 
 const spacexConfig: CodegenConfig = {
-  schema: 'https://api.spacex.land/graphql/',
-  documents: ['src/**/*.graphql', '!src/**/*.sw.graphql'],
+  schema: spacexURL,
+  documents: [
+    'src/**/*.graphql',
+    '!src/**/*.sw.graphql',
+    '!src/**/*.countries.graphql',
+  ],
   overwrite: true,
   generates: {
     'src/graphql/generated/spacex.ts': {

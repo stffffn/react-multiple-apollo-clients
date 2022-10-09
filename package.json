@@ -24,9 +24,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "update-graphql": "npm run update-graphql:spacex & npm run update-graphql:starwars",
+    "update-graphql": "npm run update-graphql:spacex & npm run update-graphql:starwars & npm run update-graphql:countries",
     "update-graphql:spacex": "graphql-codegen --config src/graphql/codegen/spacexConfig.ts",
-    "update-graphql:starwars": "graphql-codegen --config src/graphql/codegen/starwarsConfig.ts"
+    "update-graphql:starwars": "graphql-codegen --config src/graphql/codegen/starWarsConfig.ts",
+    "update-graphql:countries": "graphql-codegen --config src/graphql/codegen/countriesConfig.ts"
   },
   "eslintConfig": {
     "extends": [

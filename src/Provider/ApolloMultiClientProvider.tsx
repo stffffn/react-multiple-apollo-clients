@@ -1,6 +1,8 @@
 import { ApolloClient } from '@apollo/client';
 import React from 'react';
 import {
+  API,
+  countriesApolloClient,
   spacexApolloClient,
   starWarsApolloClient,
 } from '../graphql/ApolloClients';
@@ -23,7 +25,8 @@ export const ApolloMultiClientProvider: React.FC<{
   const getClient = (clientName: string) => {
     return (
       {
-        StarWars: starWarsApolloClient,
+        [API.StarWars]: starWarsApolloClient,
+        [API.Countries]: countriesApolloClient,
       }[clientName] ?? spacexApolloClient
     );
   };

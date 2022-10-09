@@ -1,12 +1,12 @@
 import { CodegenConfig } from '@graphql-codegen/cli';
-import { API, starWarsURL } from '../ApolloClients';
+import { API, countriesURL } from '../ApolloClients';
 
-const starWarsConfig: CodegenConfig = {
-  schema: starWarsURL,
-  documents: 'src/**/*.sw.graphql',
+const countriesConfig: CodegenConfig = {
+  schema: countriesURL,
+  documents: 'src/**/*.countries.graphql',
   overwrite: true,
   generates: {
-    'src/graphql/generated/starwars.ts': {
+    'src/graphql/generated/countries.ts': {
       plugins: [
         'typescript',
         'typescript-operations',
@@ -16,15 +16,15 @@ const starWarsConfig: CodegenConfig = {
         apolloReactHooksImportFrom: '../CustomApolloHooks',
         defaultBaseOptions: {
           context: {
-            clientName: API.StarWars,
+            clientName: API.Countries,
           },
         },
       },
     },
-    'src/graphql/generated/starwars.schema.json': {
+    'src/graphql/generated/countries.schema.json': {
       plugins: ['introspection'],
     },
   },
 };
 
-export default starWarsConfig;
+export default countriesConfig;

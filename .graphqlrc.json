@@ -4,10 +4,14 @@
       "schema": "src/graphql/generated/starwars.schema.json",
       "documents": "src/**/*.sw.graphql"
     },
+    "countries": {
+      "schema": "src/graphql/generated/countries.schema.json",
+      "documents": "src/**/*.countries.graphql"
+    },
     "spacex": {
       "schema": "src/graphql/generated/spacex.schema.json",
       "documents": "src/**/*.graphql",
-      "exclude": "src/**/*.sw.graphql"
+      "exclude": ["src/**/*.sw.graphql", "src/**/*.countries.graphql"]
     }
   }
 }
