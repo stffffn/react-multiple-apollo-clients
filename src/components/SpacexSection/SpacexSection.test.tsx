@@ -38,23 +38,29 @@ describe('SpaceXSection', () => {
     await act(() => wait(0));
   });
 
-  it('should render the first dragon entry', () => {
+  it('should render the first dragon entry headline', () => {
     const headline = screen.getByRole('heading', {
-      level: 2,
+      level: 3,
       name: firstEntry.name,
     });
-    const description = screen.getByText(firstEntry.description);
     expect(headline).toBeVisible();
+  });
+
+  it('should render the first dragon entry description', () => {
+    const description = screen.getByText(firstEntry.description);
     expect(description).toBeVisible();
   });
 
-  it('should render the second dragon entry', () => {
+  it('should render the second dragon entry headline', () => {
     const headline = screen.getByRole('heading', {
-      level: 2,
+      level: 3,
       name: secondEntry.name,
     });
-    const description = screen.getByText(secondEntry.description);
     expect(headline).toBeVisible();
+  });
+
+  it('should render the second dragon entry description', () => {
+    const description = screen.getByText(secondEntry.description);
     expect(description).toBeVisible();
   });
 });

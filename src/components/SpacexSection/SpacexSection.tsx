@@ -9,9 +9,8 @@ export const SpacexSection: React.FC = () => {
       {loading && <span>Loading...</span>}
       {data?.dragons?.map((dragon, index) => (
         <div key={index}>
-          <h3>
-            {dragon?.name} (Active: {dragon?.active?.toString()})
-          </h3>
+          <h3>{dragon?.name}</h3>
+          <span>Active: {dragon?.active?.toString()}</span>
           <p>{dragon?.description}</p>
         </div>
       ))}
