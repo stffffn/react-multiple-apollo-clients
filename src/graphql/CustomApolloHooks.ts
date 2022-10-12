@@ -5,6 +5,8 @@ import { useApolloMultiClient } from '../Provider/ApolloMultiClientProvider';
 // Re-export everything else that has not been changed
 export * from '@apollo/client';
 
+// For this example project we will limit the hooks to normal queries.
+// Here you would also add custom hooks for lazy queries, mutations, etc.
 export function useQuery<TData = any, TVariables = Apollo.OperationVariables>(
   query:
     | Apollo.DocumentNode
