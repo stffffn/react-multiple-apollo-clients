@@ -2,16 +2,23 @@
   "projects": {
     "starwars": {
       "schema": "src/graphql/generated/starwars.schema.json",
-      "documents": "src/**/*.sw.graphql"
+      "documents": ["src/**/*.sw.graphql", "src/generated/starwars.ts"],
+      "exclude": ["src/generated/countries.ts", "src/generated/spacex.ts"]
     },
     "countries": {
       "schema": "src/graphql/generated/countries.schema.json",
-      "documents": "src/**/*.countries.graphql"
+      "documents": ["src/**/*.countries.graphql", "src/generated/countries.ts"],
+      "exclude": ["src/generated/starwars.ts", "src/generated/spacex.ts"]
     },
     "spacex": {
       "schema": "src/graphql/generated/spacex.schema.json",
       "documents": "src/**/*.graphql",
-      "exclude": ["src/**/*.sw.graphql", "src/**/*.countries.graphql"]
+      "exclude": [
+        "src/**/*.sw.graphql",
+        "src/**/*.countries.graphql",
+        "src/generated/starwars.ts",
+        "src/generated/countries.ts"
+      ]
     }
   }
 }
