@@ -1,13 +1,16 @@
-import * as Apollo from '@apollo/client';
-import { TaggedTemplateExpression } from 'typescript';
-import { useApolloMultiClient } from '../Provider/ApolloMultiClientProvider';
+import * as Apollo from "@apollo/client";
+import { TaggedTemplateExpression } from "typescript";
+import { useApolloMultiClient } from "../Provider/ApolloMultiClientProvider";
 
 // Re-export everything else that has not been changed
-export * from '@apollo/client';
+export * from "@apollo/client";
 
 // For this example project we will limit the hooks to normal queries.
 // Here you would also add custom hooks for lazy queries, mutations, etc.
-export function useQuery<TData = any, TVariables = Apollo.OperationVariables>(
+export function useQuery<
+  TData = any,
+  TVariables extends Apollo.OperationVariables = Apollo.OperationVariables
+>(
   query:
     | Apollo.DocumentNode
     | Apollo.TypedDocumentNode<TaggedTemplateExpression, TVariables>,
