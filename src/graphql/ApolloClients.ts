@@ -1,15 +1,15 @@
-import { ApolloClient, InMemoryCache } from '@apollo/client';
+import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 export enum API {
-  SpaceX = 'SpaceX',
-  StarWars = 'StarWars',
-  Countries = 'Countries',
+  SpaceX = "SpaceX",
+  StarWars = "StarWars",
+  Countries = "Countries",
 }
 
-export const spacexURL = 'https://api.spacex.land/graphql/';
+export const spacexURL = "https://spacex-production.up.railway.app/";
 export const starWarsURL =
-  'https://swapi-graphql.netlify.app/.netlify/functions/index';
-export const countriesURL = 'https://countries.trevorblades.com/graphql';
+  "https://swapi-graphql.netlify.app/.netlify/functions/index";
+export const countriesURL = "https://countries.trevorblades.com/graphql";
 
 export const spacexApolloClient = new ApolloClient({
   uri: spacexURL,
