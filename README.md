@@ -32,9 +32,9 @@ Well, here we go:
 
 This example implements three different Apollo Clients for the following public GraphQL APIs:
 
-- [SpaceX](https://studio.apollographql.com/public/SpaceX-pxxbxen/home?variant=current) (as a default API)
-- [Star Wars](https://studio.apollographql.com/public/star-wars-swapi/home?variant=current)
-- [Countries](https://studio.apollographql.com/public/countries/home?variant=current)
+- [SpaceX](https://studio.apollographql.com/public/SpaceX-pxxbxen/variant/current/home) (as a default API)
+- [Star Wars](https://studio.apollographql.com/public/star-wars-swapi/variant/current/home)
+- [Countries](https://studio.apollographql.com/public/countries/variant/current/home)
 
 ### GraphQL Code Generator
 
@@ -48,11 +48,11 @@ They generate the following file types for all APIs:
 
 - `<apiName>.ts` containing Typescript types and react hooks for the queries:
   - [`spacex.ts`](src/graphql/generated/spacex.ts)
-  - [`starWars.ts`](src/graphql/generated/starWars.ts)
+  - [`starwars.ts`](src/graphql/generated/starwars.ts)
   - [`countries.ts`](src/graphql/generated/countries.ts)
 - `<apiName>.schema.json` containing the GraphQL schema used only for IDE autocompletion:
   - [`spacex.schema.json`](src/graphql/generated/spacex.schema.json)
-  - [`starWars.schema.json`](src/graphql/generated/starWars.schema.json)
+  - [`starwars.schema.json`](src/graphql/generated/starwars.schema.json)
   - [`countries.schema.json`](src/graphql/generated/countries.schema.json)
 
 ### API Differentiation
